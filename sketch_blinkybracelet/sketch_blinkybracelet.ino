@@ -7,27 +7,36 @@
  * nishakumarx@gmail.com
  */
 
-// declare pins
-int matrix[2][2] = {{10,11},{12,13}};
+// struct to store led pin high and pin low
+typedef struct{
+  int pinHigh;
+  int pinLow;
+} LED;
+
+// array of leds
+// This is assuming the LEDs look like this
+// 1 2
+// 3 4
+LED leds[4] = {{13, 11}, {13, 10}, {12, 11}, {12, 10}};
 
 void setup() {
   // initialize digital PWM pins
-  for (int i=0; i<2; i++){
-    for(int j=0; j<2; j++){
-      pinMode(matrix[i][j], OUTPUT);
-    }
-  }
+  pinMode(13, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(10, OUTPUT);
 
 }
 
 void loop() {
   // This runs in a loop
-  for (int i=0; i<2; i++){
-    for (int j=0; j<2; j++){
-      digitalWrite(matrix[i][j], HIGH);
-      delay(500);
-      digitalWrite(matrix[i][j], LOW);
-    }
+  for (int i=0; i<4; i++){
+    //bring the pinHigh high and the pinLow low
+    int pinHigh = leds[i].pinHigh;
+    int pinLow = leds[i].pinLow;
+    digitalWrite(pinHigh, HIGH);
+    digitalWrite(pinLow, LOW);
+    delay(1000);
+    digitalWrite(pinHigh, LOW);
   }
-
 }
