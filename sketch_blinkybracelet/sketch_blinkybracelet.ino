@@ -61,6 +61,34 @@ void turnOn(int indexArray[], int len)
   }
 }
 
+/*
+ * Return a delay based on the number of LEDs
+ * We do this because the time taken to setup
+ * the pins increases exponentially as the number
+ * of LEDs increase so we cannot set a constant loop
+ * number
+ */
+int delayLoop(int noLeds)
+{
+  int loopNum = 1000;
+  switch(noLeds)
+  {
+    case 1:
+      loopNum = 1500;
+      break;
+    case 2:
+      loopNum = 900;
+      break;
+    case 3:
+      loopNum = 600;
+      break;
+    case 4:
+      loopNum = 500;
+      break; 
+  }
+  return loopNum;
+}
+
 void setup()
 {
   reset();
@@ -71,12 +99,16 @@ void setup()
 void loop() {
   // Generate a random number of leds
   int noLeds = (int) random(1,5);
+  // Serial port slows things down
+  // remove this when tuning for delays is done
+  Serial.println(noLeds);
+  Serial.println("-------------");
   int onLeds[noLeds];
   for (int i=0; i<noLeds; i++)
   {
     onLeds[i] = i+1;
   }
-  for (int i=0; i<1000; i++)
+  for (int i=0; i<delayLoop(noLeds); i++)
   {
     turnOn(onLeds, noLeds);
   }
