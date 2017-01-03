@@ -104,9 +104,27 @@ void loop() {
   Serial.println(noLeds);
   Serial.println("-------------");
   int onLeds[noLeds];
-  for (int i=0; i<noLeds; i++)
+  // get the first random number
+  onLeds[0] = (int) random(1,5);
+  int dupes, randNo;
+  for (int i=1; i<noLeds; i++)
   {
-    onLeds[i] = i+1;
+    // generate a random number
+    // that is unique
+    do
+    {
+      randNo = (int) random(1,5);
+      dupes = 0;
+      for (int j=0; j<i; j++)
+      {
+        if (onLeds[j] == randNo)
+        {
+          dupes++;
+        }
+      }
+    } while (dupes > 0);
+    
+    onLeds[i] = randNo;
   }
   for (int i=0; i<delayLoop(noLeds); i++)
   {
