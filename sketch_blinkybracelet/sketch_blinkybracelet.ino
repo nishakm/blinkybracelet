@@ -45,9 +45,9 @@ void reset()
  * We need to do a list because the LEDs
  * are all tied together
  */
-void turnOn(int indexArray[], int no)
+void turnOn(int indexArray[], int len)
 { 
-  for (int i=0; i<no; i++)
+  for (int i=0; i<len; i++)
   {
     int ledNo = indexArray[i]-1;
     // set pinmode
@@ -61,12 +61,23 @@ void turnOn(int indexArray[], int no)
   }
 }
 
-void setup() {
+void setup()
+{
   reset();
+  randomSeed(analogRead(A0)); //seed random number generator
+  Serial.begin(9600);
 }
 
 void loop() {
-  // Turn on 1 and 4
-  int onLeds[] = {1, 4};
-  turnOn(onLeds, sizeof(onLeds));
+  // Generate a random number of leds
+  int noLeds = (int) random(1,5);
+  int onLeds[noLeds];
+  for (int i=0; i<noLeds; i++)
+  {
+    onLeds[i] = i+1;
+  }
+  for (int i=0; i<1000; i++)
+  {
+    turnOn(onLeds, noLeds);
+  }
 }
