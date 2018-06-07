@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.2.1">
+<eagle version="8.6.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="10" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="1" altunitdist="mil" altunit="mil"/>
@@ -53,8 +54,8 @@
 <layer number="58" name="bCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
-<layer number="88" name="SimResults" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="89" name="SimProbes" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="88" name="SimResults" color="7" fill="1" visible="no" active="no"/>
+<layer number="89" name="SimProbes" color="7" fill="1" visible="no" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="no" active="no"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="no" active="no"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="no" active="no"/>
@@ -818,10 +819,11 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <param name="slThermalsForVias" value="0"/>
 <param name="dpMaxLengthDifference" value="10mm"/>
 <param name="dpGapFactor" value="2.5"/>
-<param name="checkGrid" value="0"/>
 <param name="checkAngle" value="0"/>
 <param name="checkFont" value="1"/>
 <param name="checkRestrict" value="1"/>
+<param name="checkStop" value="0"/>
+<param name="checkValues" value="0"/>
 <param name="useDiameter" value="13"/>
 <param name="maxErrors" value="50"/>
 </designrules>
@@ -1412,6 +1414,8 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="14.0208" y1="48.768" x2="14.9352" y2="49.6824" width="0.1524" layer="1"/>
 <wire x1="36.8046" y1="33.8328" x2="36.83" y2="33.782" width="0.1524" layer="1"/>
 <wire x1="14.0208" y1="48.768" x2="13.97" y2="48.768" width="0.1524" layer="1"/>
+<contactref element="U1" pad="P39"/>
+<wire x1="7.92" y1="45.622" x2="8.636" y2="47.664" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="DTR">
 <contactref element="C11" pad="2"/>
@@ -1467,6 +1471,8 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 </signal>
 <signal name="SWCLK">
 <contactref element="SWD" pad="4"/>
+<contactref element="U1" pad="P43"/>
+<wire x1="5.72" y1="45.622" x2="6.096" y2="51.943" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="A0">
 <contactref element="U1" pad="P15"/>
@@ -1581,6 +1587,21 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 </signal>
 <signal name="N$7">
 </signal>
+<signal name="TRACED0">
+<contactref element="U1" pad="P36"/>
+</signal>
+<signal name="TRACED3">
+<contactref element="U1" pad="P32"/>
+</signal>
+<signal name="TRACED2">
+<contactref element="U1" pad="P33"/>
+</signal>
+<signal name="TRACED1">
+<contactref element="U1" pad="P34"/>
+</signal>
+<signal name="DIO/P0.17">
+<contactref element="U1" pad="P35"/>
+</signal>
 </signals>
 </board>
 </drawing>
@@ -1590,7 +1611,7 @@ Since Version 6.2.2 text objects can contain more than one line,
 which will not be processed correctly with this version.
 </note>
 <note version="8.2" severity="warning">
-Since Version 8.2, Eagle supports online libraries. The ids
+Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)
 with this version.
 </note>

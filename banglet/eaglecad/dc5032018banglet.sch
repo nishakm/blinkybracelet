@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.2.1">
+<eagle version="8.6.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -5046,10 +5047,10 @@ MONITORING</text>
 <pinref part="GND15" gate="1" pin="GND"/>
 <wire x1="22.86" y1="-43.18" x2="22.86" y2="-40.64" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="GND8"/>
-<wire x1="22.86" y1="-38.1" x2="22.86" y2="-35.56" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="-35.56" x2="17.78" y2="-40.64" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="-40.64" x2="22.86" y2="-40.64" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="-40.64" x2="22.86" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="-40.64" x2="22.86" y2="-35.56" width="0.1524" layer="91"/>
+<junction x="22.86" y="-40.64"/>
 </segment>
 <segment>
 <pinref part="X4" gate="G$1" pin="GND"/>
@@ -5084,8 +5085,7 @@ MONITORING</text>
 <pinref part="U4" gate="G$1" pin="VDD"/>
 <pinref part="C10" gate="G$1" pin="1"/>
 <wire x1="63.5" y1="15.24" x2="60.96" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="15.24" x2="55.88" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="15.24" x2="50.8" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="15.24" x2="50.8" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="15.24" x2="50.8" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="12.7" x2="60.96" y2="15.24" width="0.1524" layer="91"/>
 <junction x="60.96" y="15.24"/>
@@ -5277,6 +5277,7 @@ MONITORING</text>
 <segment>
 <wire x1="27.94" y1="5.08" x2="40.64" y2="5.08" width="0.1524" layer="91"/>
 <label x="33.02" y="5.08" size="1.778" layer="95"/>
+<pinref part="U1" gate="G$1" pin="NRESET*/P0.21"/>
 </segment>
 </net>
 <net name="DTR" class="0">
@@ -5332,6 +5333,7 @@ MONITORING</text>
 <segment>
 <wire x1="27.94" y1="15.24" x2="40.64" y2="15.24" width="0.1524" layer="91"/>
 <label x="33.02" y="15.24" size="1.778" layer="95"/>
+<pinref part="U1" gate="G$1" pin="SWCLK"/>
 </segment>
 </net>
 <net name="A0" class="0">
@@ -5381,6 +5383,7 @@ MONITORING</text>
 <segment>
 <wire x1="27.94" y1="-2.54" x2="40.64" y2="-2.54" width="0.1524" layer="91"/>
 <label x="30.48" y="-2.54" size="1.778" layer="95"/>
+<pinref part="U1" gate="G$1" pin="TRACED[0]/P0.18"/>
 </segment>
 </net>
 <net name="DIO/P0.13" class="0">
@@ -5394,24 +5397,28 @@ MONITORING</text>
 <segment>
 <wire x1="27.94" y1="-12.7" x2="40.64" y2="-12.7" width="0.1524" layer="91"/>
 <label x="30.48" y="-12.7" size="1.778" layer="95"/>
+<pinref part="U1" gate="G$1" pin="TRACED[3]/P0.14"/>
 </segment>
 </net>
 <net name="TRACED2" class="0">
 <segment>
 <wire x1="27.94" y1="-10.16" x2="40.64" y2="-10.16" width="0.1524" layer="91"/>
 <label x="30.48" y="-10.16" size="1.778" layer="95"/>
+<pinref part="U1" gate="G$1" pin="TRACED[2]/P0.15"/>
 </segment>
 </net>
 <net name="TRACED1" class="0">
 <segment>
 <wire x1="27.94" y1="-7.62" x2="40.64" y2="-7.62" width="0.1524" layer="91"/>
 <label x="30.48" y="-7.62" size="1.778" layer="95"/>
+<pinref part="U1" gate="G$1" pin="TRACED[1]/P0.16"/>
 </segment>
 </net>
 <net name="DIO/P0.17" class="0">
 <segment>
 <wire x1="27.94" y1="-5.08" x2="40.64" y2="-5.08" width="0.1524" layer="91"/>
 <label x="30.48" y="-5.08" size="1.778" layer="95"/>
+<pinref part="U1" gate="G$1" pin="P0.17"/>
 </segment>
 </net>
 <net name="DIO/P0.19" class="0">
@@ -5466,7 +5473,7 @@ Since Version 6.2.2 text objects can contain more than one line,
 which will not be processed correctly with this version.
 </note>
 <note version="8.2" severity="warning">
-Since Version 8.2, Eagle supports online libraries. The ids
+Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)
 with this version.
 </note>
