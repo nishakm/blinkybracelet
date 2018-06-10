@@ -1235,38 +1235,6 @@ TS-003</description>
 <rectangle x1="-0.3" y1="0.6" x2="0.3" y2="1.2" layer="31"/>
 <rectangle x1="-0.3" y1="-1.2" x2="0.3" y2="-0.6" layer="31"/>
 </package>
-<package name="1X01_OVAL">
-<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
-<pad name="1" x="0" y="0" drill="1" diameter="1.6764" shape="long" rot="R90"/>
-<text x="-1.3462" y="1.8288" size="0.8128" layer="25" ratio="18">&gt;NAME</text>
-<text x="-1.27" y="-3.175" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
-<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
-</package>
-<package name="1X01_ROUND">
-<pad name="1" x="0" y="0" drill="1" diameter="1.6764" rot="R90"/>
-<text x="-1.3462" y="1.8288" size="0.8128" layer="25" ratio="18">&gt;NAME</text>
-<text x="-1.27" y="-3.175" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
-<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
-</package>
-<package name="1X01_2MM">
-<pad name="1" x="0" y="0" drill="0.8" diameter="1.27" rot="R90"/>
-<text x="-1.3462" y="1.8288" size="0.8128" layer="25" ratio="18">&gt;NAME</text>
-<text x="-1.27" y="-3.175" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
-<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
-</package>
-<package name="1X01_2MM_OVAL">
-<pad name="1" x="0" y="0" drill="0.8" diameter="1.27" shape="long" rot="R90"/>
-<text x="-1.3462" y="1.8288" size="0.8128" layer="25" ratio="18">&gt;NAME</text>
-<text x="-1.27" y="-3.175" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
-<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
-</package>
-<package name="1X01_SMD_MASKHELD_2X2MM">
-<smd name="1" x="0" y="0" dx="2.4" dy="2.4" layer="1" cream="no"/>
-</package>
-<package name="1X01_SMD_MASKHELD_1X2MM">
-<smd name="P$1" x="0" y="0" dx="1.4" dy="2.4" layer="1" stop="no" cream="no"/>
-<rectangle x1="-0.5" y1="-1" x2="0.5" y2="1" layer="29"/>
-</package>
 <package name="MICRO-USB5+6P-SMD-0.65-B">
 <wire x1="-3.7" y1="-5" x2="-3.7" y2="0" width="0.127" layer="51"/>
 <wire x1="-3.7" y1="0" x2="3.7" y2="0" width="0.127" layer="51"/>
@@ -1584,15 +1552,6 @@ Op. Temp: -40~85°C</text>
 <text x="-1.905" y="-2.54" size="1.4224" layer="95" ratio="10">PAD</text>
 <text x="-5.08" y="6.35" size="1.778" layer="95">&gt;NAME</text>
 <pin name="TP" x="0" y="-7.62" visible="off" length="short" direction="pwr" rot="R90"/>
-</symbol>
-<symbol name="PINHD1">
-<wire x1="-6.35" y1="-2.54" x2="1.27" y2="-2.54" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="-2.54" x2="1.27" y2="2.54" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="2.54" x2="-6.35" y2="2.54" width="0.4064" layer="94"/>
-<wire x1="-6.35" y1="2.54" x2="-6.35" y2="-2.54" width="0.4064" layer="94"/>
-<text x="-6.35" y="3.175" size="1.778" layer="95">&gt;NAME</text>
-<text x="-6.35" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="1" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
 </symbol>
 <symbol name="USB">
 <circle x="-1.32" y="1.6" radius="0.5" width="1" layer="94"/>
@@ -3028,62 +2987,6 @@ Op. Temp: -40~85°C</text>
 <connect gate="G$1" pin="VIO" pad="5"/>
 <connect gate="G$1" pin="VPP" pad="16"/>
 <connect gate="G$2" pin="TP" pad="THERM"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="HEADER-1X1" prefix="JP" uservalue="yes">
-<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
-<gates>
-<gate name="G$1" symbol="PINHD1" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="1X01_OVAL">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="ROUND" package="1X01_ROUND">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="2MM" package="1X01_2MM">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="2MM_OVAL" package="1X01_2MM_OVAL">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="-SMD_MASKHELD_2X2MM" package="1X01_SMD_MASKHELD_2X2MM">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="-SMD-MASKHELD_1X2MM" package="1X01_SMD_MASKHELD_1X2MM">
-<connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -5085,12 +4988,6 @@ FIDUCIAL</description>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="X1" library="adafruit2" deviceset="XTAL" device="-3.2X1.5" value="32.768"/>
-<part name="JP1" library="microbuilder" deviceset="HEADER-1X1" device="2MM"/>
-<part name="JP2" library="microbuilder" deviceset="HEADER-1X1" device="2MM"/>
-<part name="C9" library="microbuilder" deviceset="CAP_CERAMIC" device="_0603MP" value="300pF"/>
-<part name="C13" library="microbuilder" deviceset="CAP_CERAMIC" device="_0603MP" value="300pF"/>
-<part name="U$23" library="microbuilder" deviceset="GND" device=""/>
-<part name="U$28" library="microbuilder" deviceset="GND" device=""/>
 <part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="A0" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="WIREPAD" device="2,54/0,9"/>
@@ -5194,12 +5091,6 @@ MONITORING</text>
 <instance part="GND7" gate="1" x="-48.26" y="-35.56"/>
 <instance part="GND8" gate="1" x="-33.02" y="-35.56"/>
 <instance part="X1" gate="G$1" x="-40.64" y="-22.86"/>
-<instance part="JP1" gate="G$1" x="12.7" y="-43.18"/>
-<instance part="JP2" gate="G$1" x="5.08" y="-43.18" rot="R180"/>
-<instance part="C9" gate="G$1" x="15.24" y="-53.34"/>
-<instance part="C13" gate="G$1" x="2.54" y="-53.34"/>
-<instance part="U$23" gate="G$1" x="2.54" y="-58.42"/>
-<instance part="U$28" gate="G$1" x="15.24" y="-58.42"/>
 <instance part="GND14" gate="1" x="38.1" y="25.4" rot="R90"/>
 <instance part="GND15" gate="1" x="22.86" y="-45.72"/>
 <instance part="A0" gate="G$1" x="-38.1" y="-15.24"/>
@@ -5300,14 +5191,6 @@ MONITORING</text>
 <pinref part="C1" gate="G$1" pin="2"/>
 <wire x1="-10.16" y1="-45.72" x2="-10.16" y2="-35.56" width="0.1524" layer="91"/>
 <junction x="-10.16" y="-45.72"/>
-</segment>
-<segment>
-<pinref part="C13" gate="G$1" pin="2"/>
-<pinref part="U$23" gate="G$1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="C9" gate="G$1" pin="2"/>
-<pinref part="U$28" gate="G$1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="GND12"/>
@@ -5692,17 +5575,6 @@ MONITORING</text>
 <junction x="-48.26" y="-22.86"/>
 </segment>
 </net>
-<net name="P0.09/NFC1" class="0">
-<segment>
-<pinref part="JP2" gate="G$1" pin="1"/>
-<pinref part="C13" gate="G$1" pin="1"/>
-<wire x1="2.54" y1="-48.26" x2="7.62" y2="-48.26" width="0.1524" layer="91"/>
-<wire x1="7.62" y1="-48.26" x2="7.62" y2="-43.18" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="P0.09/NFC1"/>
-<wire x1="7.62" y1="-43.18" x2="7.62" y2="-35.56" width="0.1524" layer="91"/>
-<junction x="7.62" y="-43.18"/>
-</segment>
-</net>
 <net name="TRACED0" class="0">
 <segment>
 <wire x1="27.94" y1="-2.54" x2="40.64" y2="-2.54" width="0.1524" layer="91"/>
@@ -5757,17 +5629,6 @@ MONITORING</text>
 <pinref part="U1" gate="G$1" pin="TRACECLK/P0.20"/>
 <wire x1="27.94" y1="2.54" x2="40.64" y2="2.54" width="0.1524" layer="91"/>
 <label x="30.48" y="2.54" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="P0.10/NFC2"/>
-<pinref part="JP1" gate="G$1" pin="1"/>
-<wire x1="10.16" y1="-35.56" x2="10.16" y2="-43.18" width="0.1524" layer="91"/>
-<pinref part="C9" gate="G$1" pin="1"/>
-<wire x1="15.24" y1="-48.26" x2="10.16" y2="-48.26" width="0.1524" layer="91"/>
-<wire x1="10.16" y1="-48.26" x2="10.16" y2="-43.18" width="0.1524" layer="91"/>
-<junction x="10.16" y="-43.18"/>
 </segment>
 </net>
 <net name="BDRX" class="0">
