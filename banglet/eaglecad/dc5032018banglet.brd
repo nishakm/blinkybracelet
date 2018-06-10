@@ -993,7 +993,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <elements>
 <element name="A0" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="2,54/0,9" value="WIREPAD2,54/0,9" x="37.592" y="42.418"/>
 <element name="C1" library="microbuilder" package="0805-NO" value="10uf" x="18.796" y="36.83" rot="R180"/>
-<element name="C10" library="microbuilder" package="0603-NO" value="0.1uF" x="5.08" y="48.006" rot="R270"/>
+<element name="C10" library="microbuilder" package="0603-NO" value="0.1uF" x="15.494" y="39.624" rot="R90"/>
 <element name="C11" library="microbuilder" package="0603-NO" value="0.1uF" x="9.906" y="47.498"/>
 <element name="C12" library="microbuilder" package="0603-NO" value="1nF" x="12.192" y="32.512"/>
 <element name="C5" library="microbuilder" package="0805-NO" value="10µF" x="26.924" y="42.418" rot="R90"/>
@@ -1164,8 +1164,6 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="26.924" y1="43.368" x2="26.924" y2="44.45" width="0.1524" layer="1"/>
 <via x="26.924" y="44.45" extent="1-16" drill="0.35"/>
 <wire x1="15.142" y1="45.622" x2="13.42" y2="45.622" width="0.1524" layer="1"/>
-<wire x1="4.62" y1="45.622" x2="4.62" y2="46.696" width="0.1524" layer="1"/>
-<wire x1="4.62" y1="46.696" x2="5.08" y2="47.156" width="0.1524" layer="1"/>
 <wire x1="17.846" y1="36.83" x2="17.846" y2="36.51" width="0.254" layer="1"/>
 <wire x1="17.846" y1="39.37" x2="17.846" y2="39.69" width="0.254" layer="1"/>
 <wire x1="17.846" y1="39.69" x2="18.796" y2="40.64" width="0.254" layer="1"/>
@@ -1203,7 +1201,6 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="22.672" y1="52.1001" x2="22.672" y2="50.988" width="0.254" layer="1"/>
 <wire x1="22.672" y1="50.988" x2="22.86" y2="50.8" width="0.254" layer="1"/>
 <via x="22.86" y="50.8" extent="1-16" drill="0.35"/>
-<wire x1="7.112" y1="48.856" x2="5.08" y2="48.856" width="0.254" layer="1"/>
 <wire x1="11.43" y1="49.276" x2="11.43" y2="51.943" width="0.254" layer="1"/>
 <wire x1="11.43" y1="51.943" x2="11.176" y2="52.197" width="0.254" layer="1"/>
 <wire x1="28.734" y1="45.7" x2="29.484" y2="46.45" width="0.254" layer="1"/>
@@ -1216,7 +1213,8 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="19.61113125" y1="36.83" x2="18.58173125" y2="37.8594" width="0.254" layer="1"/>
 <wire x1="13.4826" y1="37.8594" x2="13.42" y2="37.922" width="0.254" layer="1"/>
 <wire x1="18.58173125" y1="37.8594" x2="16.5354" y2="37.8594" width="0.254" layer="1"/>
-<wire x1="16.5354" y1="37.8594" x2="13.4826" y2="37.8594" width="0.254" layer="1"/>
+<wire x1="16.5354" y1="37.8594" x2="15.494" y2="37.8594" width="0.254" layer="1"/>
+<wire x1="15.494" y1="37.8594" x2="13.4826" y2="37.8594" width="0.254" layer="1"/>
 <wire x1="7.1628" y1="51.5112" x2="7.1628" y2="48.9204" width="0.254" layer="1"/>
 <wire x1="7.3914" y1="51.7398" x2="7.1628" y2="51.5112" width="0.254" layer="1"/>
 <wire x1="7.3914" y1="52.4256" x2="7.3914" y2="51.7398" width="0.254" layer="1"/>
@@ -1252,6 +1250,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="12.954" y1="49.2252" x2="16.5354" y2="45.6438" width="0.254" layer="1"/>
 <wire x1="11.5062" y1="49.2252" x2="12.954" y2="49.2252" width="0.254" layer="1"/>
 <wire x1="11.5062" y1="49.2252" x2="11.43" y2="49.276" width="0.254" layer="1"/>
+<wire x1="15.494" y1="38.774" x2="15.494" y2="37.8594" width="0.254" layer="1"/>
 </signal>
 <signal name="VBUS" class="1">
 <contactref element="R12" pad="2"/>
