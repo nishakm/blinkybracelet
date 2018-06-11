@@ -4991,7 +4991,7 @@ FIDUCIAL</description>
 <part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="A0" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="WIREPAD" device="2,54/0,9"/>
-<part name="VCC" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="WIREPAD" device="2,54/0,9"/>
+<part name="VLED" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="WIREPAD" device="2,54/0,9"/>
 <part name="GND" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="WIREPAD" device="2,54/0,9"/>
 <part name="X4" library="microbuilder" deviceset="MICRO-USB-SMD-B-(10118193-0001LF)-ADASYM" device="" value="20329"/>
 <part name="U$11" library="microbuilder" deviceset="GND" device=""/>
@@ -5094,7 +5094,7 @@ MONITORING</text>
 <instance part="GND14" gate="1" x="38.1" y="25.4" rot="R90"/>
 <instance part="GND15" gate="1" x="22.86" y="-45.72"/>
 <instance part="A0" gate="G$1" x="-38.1" y="-15.24"/>
-<instance part="VCC" gate="G$1" x="-40.64" y="-45.72"/>
+<instance part="VLED" gate="G$1" x="-40.64" y="-45.72"/>
 <instance part="GND" gate="G$1" x="-45.72" y="10.16"/>
 <instance part="X4" gate="G$1" x="104.14" y="68.58" rot="R270"/>
 <instance part="U$11" gate="G$1" x="99.06" y="55.88"/>
@@ -5663,7 +5663,7 @@ MONITORING</text>
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="VCC" gate="G$1" pin="P"/>
+<pinref part="VLED" gate="G$1" pin="P"/>
 <pinref part="JP3" gate="G$1" pin="2"/>
 <wire x1="-38.1" y1="-45.72" x2="-35.56" y2="-45.72" width="0.1524" layer="91"/>
 </segment>
