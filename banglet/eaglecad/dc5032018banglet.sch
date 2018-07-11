@@ -4845,6 +4845,7 @@ MONITORING</text>
 </segment>
 <segment>
 <wire x1="175.26" y1="-25.4" x2="180.34" y2="-25.4" width="0.1524" layer="91"/>
+<pinref part="LEDCONN" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="3.3V" class="1">
@@ -5134,6 +5135,7 @@ MONITORING</text>
 </segment>
 <segment>
 <wire x1="175.26" y1="-22.86" x2="180.34" y2="-22.86" width="0.1524" layer="91"/>
+<pinref part="LEDCONN" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$1" class="0">
